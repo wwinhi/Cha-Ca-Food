@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { FaPhoneAlt, FaEnvelope, FaUser, FaSearch, FaShoppingCart } from "react-icons/fa";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./Header/header";
+import ProductDetails from "./pages/ProductDetails";
+import Footer from "./Footer/Footer";
+import Home from "./pages/Home";
+
+import GioiThieu from "./pages/GioiThieu";
+import SanPham from "./pages/SanPham";
+import TinTuc from "./pages/TinTuc";
+import LienHe from "./pages/LienHe";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+     <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/gioi-thieu" element={<GioiThieu />} />
+        <Route path="san-pham" element={<SanPham />} />
+        <Route path="/tin-tuc" element={<TinTuc />} />
+        <Route path="/lien-he" element={<LienHe />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+      </Routes>
+      {/* <Blog/> */}
+      <Footer/>
+    </Router>
+
     </div>
   );
 }

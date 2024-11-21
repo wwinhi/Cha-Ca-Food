@@ -1,0 +1,83 @@
+/* Phần header-bottom giữ nguyên cấu trúc */
+.header-bottom {
+  display: flex; /* Sắp xếp theo hàng ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; /* Đặt toàn bộ nội dung vào giữa */
+  background-color: #e1e1e1;
+  padding: 10px 20px; /* Khoảng cách bên trong */
+  gap: 10px; /* Khoảng cách giữa logo và navbar */
+}
+
+.logo {
+  height: 60px; /* Giữ nguyên chiều cao logo */
+  max-width: 150px; /* Giữ nguyên chiều rộng tối đa */
+  margin-right: 10px; /* Tạo khoảng cách giữa logo và navbar */
+}
+
+.navbar {
+  display: flex; /* Sắp xếp các mục ngang */
+  gap: 15px; /* Khoảng cách giữa các mục menu */
+  align-items: center; /* Đảm bảo menu căn giữa với logo */
+}
+
+.navbar a {
+  color: rgb(0, 0, 0); /* Màu chữ */
+  text-decoration: none; /* Xóa gạch chân */
+  padding: 10px 15px; /* Padding cho các mục */
+  border-radius: 5px; /* Bo tròn các góc */
+  transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+  font-size: 18px; /* Cỡ chữ */
+  font-weight: bold; /* In đậm */
+}
+
+.navbar a:hover {
+  background-color: #0056b3; /* Màu nền khi hover */
+  color: #ffffff; /* Thêm màu chữ khi hover */
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative; /* Tạo ngữ cảnh cho dropdown menu */
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Hiệu ứng khi hover */
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block; /* Hiển thị menu khi hover */
+}
+
+.dropdown-menu {
+  display: none; /* Ẩn menu mặc định */
+  position: absolute; /* Định vị tương đối với .dropdown */
+  top: 100%; /* Đặt menu ngay dưới mục "Giới thiệu" */
+  left: 0;
+  background-color: #fff; /* Màu nền menu */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng đổ bóng */
+  border-radius: 5px; /* Bo góc menu */
+  z-index: 100;
+  padding: 10px 0; /* Khoảng cách bên trong */
+  width: 200px; /* Độ rộng menu */
+}
+
+.dropdown-menu a {
+  color: #333; /* Màu chữ */
+  padding: 10px 20px; /* Khoảng cách bên trong mục */
+  display: block; /* Hiển thị mỗi mục trên một dòng */
+  text-decoration: none; /* Xóa gạch chân */
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0; /* Màu nền khi hover */
+  color: #000; /* Màu chữ khi hover */
+}

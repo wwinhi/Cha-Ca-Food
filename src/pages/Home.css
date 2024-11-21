@@ -1,0 +1,315 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 30px 0; /* Chỉnh padding đều hai bên */
+  }
+  .banner-images {
+    display: grid;
+    grid-template-columns: 3.75fr 1.5fr; /* Cột trái lớn hơn cột phải */
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px;
+    margin-bottom: 30px;
+    align-items: stretch; /* Căn chỉnh chiều cao cả hai cột */
+  }
+  
+  .main-image {
+    grid-row: span 2;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    border: 4px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-images img {
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid #fff;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giữ tỷ lệ hình ảnh */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+
+  .sub-images {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Hai cột đều nhau */
+    grid-auto-rows: 1fr; /* Hàng có chiều cao đồng đều */
+    gap: 10px;
+  }
+  
+  .sub-images img {
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid #fff;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giữ tỷ lệ hình ảnh */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  
+  .sub-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .sub-images img:nth-child(3) {
+    grid-column: span 2; /* Ảnh thứ ba chiếm toàn bộ chiều rộng hàng */
+    grid-row: span 2; /* Đảm bảo chiều cao cân đối */
+  }
+  
+  .banner-highlights {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px; /* Giảm kích thước tối đa để gọn hơn */
+    margin-top: 20px;
+    padding: 15px 0; /* Giảm padding để phần này gọn hơn */
+    font-size: 14px; /* Giảm kích thước chữ */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px; /* Giảm khoảng cách giữa icon và text */
+    color: #0c0404;
+    max-width: 150px; /* Giảm chiều rộng tối đa để các phần tử nhỏ hơn */
+    font-weight: 500;
+  }
+  
+  .highlight svg {
+    font-size: 24px; /* Giảm kích thước icon */
+    color: #1e90ff; /* Giữ nguyên màu xanh cho icon */
+  }
+
+  .about {
+    margin-top: 19px;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: left; /* Chỉnh căn lề trái */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .about h2 {
+    font-size: 2rem;
+    color: #000077;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center; /* Chỉ tiêu đề căn giữa */
+  }
+  
+  
+  .about p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 15px;
+    text-align: left; /* Căn lề trái cho đoạn văn */
+  }
+  
+  .about ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left; /* Căn lề trái cho danh sách */
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about ul li {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .about ul li::before {
+    content: "✔️";
+    color: #007BFF;
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+  
+  /* Font chung cho toàn bộ .content-section */
+  .content-section {
+    max-width: 800px;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: left; /* Đảm bảo căn lề trái */
+    font-family: 'Roboto', sans-serif; /* Font chữ hiện đại và dễ đọc */
+    color: #333;
+  }
+  
+  /* Tiêu đề chính */
+  .content-section h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #000077;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: left; /* Tiêu đề căn lề trái */
+  }
+  
+
+/* Tiêu đề phụ */
+.content-section h3 {
+  font-size: 22px; /* Tăng kích thước để dễ đọc hơn */
+  margin-top: 20px;
+  color: #000077; /* Màu nhẹ hơn một chút */
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+/* Đoạn văn */
+.content-section p {
+  line-height: 1.8; /* Tăng khoảng cách giữa các dòng để dễ đọc hơn */
+  margin-bottom: 15px;
+  color: #555;
+  font-size: 16px; /* Kích thước phù hợp cho văn bản chính */
+}
+
+/* Danh sách các mục */
+.content-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #555;
+}
+
+.content-section ul li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Hình ảnh sản phẩm và chú thích */
+.product-image-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.product-detail-image {
+  width: 100%;
+  max-width: 500px; /* Tăng kích thước tối đa của ảnh lên 500px */
+  height: auto;
+  border-radius: 8px; /* Làm mềm các góc ảnh */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm đổ bóng để ảnh nổi bật */
+}
+
+/* Chú thích dưới hình ảnh */
+.image-caption {
+  font-style: italic;
+  color: #888;
+  margin-top: 5px;
+  font-size: 14px; /* Nhỏ hơn một chút so với văn bản chính */
+  font-family: 'Georgia', serif; /* Font chữ kiểu chữ nghiêng cổ điển */
+}
+/* Định dạng chung cho phần tin tức */
+.news-section {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.news-header h2 {
+    font-size: 28px;
+    color: #003366; /* Màu xanh đậm */
+    font-weight: bold;
+    margin: 0;
+}
+
+.view-all-link {
+    color: #003366;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.view-all-link:hover {
+    color: #007acc; /* Màu xanh sáng hơn khi hover */
+    text-decoration: underline;
+}
+
+/* Định dạng cho các bài viết */
+.news-items {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Đảm bảo các item không xuống hàng */
+    overflow-x: auto; /* Cho phép cuộn ngang khi không đủ không gian */
+}
+
+.news-item {
+    flex: 0 0 calc(33.33% - 20px); /* Mỗi item chiếm 1/3 không gian và khoảng cách giữa các item */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.news-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+.news-item h3 {
+    font-size: 18px;
+    color: #003366;
+    margin-bottom: 10px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.news-item p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Responsive cho màn hình nhỏ hơn */
+@media (max-width: 768px) {
+    .news-items {
+        flex-wrap: wrap;
+    }
+
+    .news-item {
+        flex: 1 1 100%; /* Các item xếp chồng lên nhau trên màn hình nhỏ */
+        max-width: 100%;
+    }
+}
